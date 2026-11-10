@@ -86,6 +86,7 @@ body {
     background: linear-gradient(135deg, #ec78a8, #f7a9c9, #ffc5dc);
     height: 145px;
     position: relative;
+    z-index: 1;
 }
 
 .header::after {
@@ -106,6 +107,8 @@ body {
 .profile {
     text-align: center;
     padding: 0 25px 30px;
+     position: relative;
+    z-index: 2;
 }
     
 .profile img {
@@ -116,9 +119,14 @@ body {
     border-radius: 20px;
     border: 6px solid white;
     margin-top: -70px;
+
+    position: relative;
+    z-index: 3;
+
     background: #ffe4ef;
     box-shadow: 0 5px 20px rgba(219,112,147,0.3);
     transition: 0.5s;
+    animation: fotoMasuk 1.5s ease;
 }
 }
 
