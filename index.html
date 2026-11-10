@@ -1,158 +1,258 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Mahasiswa</title>
-    <!-- FontAwesome untuk ikon media sosial -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .card {
-            background: #ffffff;
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-        }
-        .card-header {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            height: 120px;
-        }
-        .profile-img-container {
-            margin-top: -60px;
-            margin-bottom: 15px;
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #ffffff;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        .profile-body {
-            padding: 0 25px 25px 25px;
-        }
-        .name {
-            font-size: 1.5rem;
-            color: #1e293b;
-            font-weight: 700;
-        }
-        .identity {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-top: 4px;
-        }
-        .prodi-badge {
-            display: inline-block;
-            background-color: #e0e7ff;
-            color: #3730a3;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin: 12px 0 16px 0;
-        }
-        .bio {
-            font-size: 0.95rem;
-            color: #475569;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-        .hobbies {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-        .hobby-tag {
-            background-color: #f1f5f9;
-            color: #334155;
-            padding: 5px 12px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .social-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f1f5f9;
-            color: #334155;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .social-btn:hover {
-            background-color: #2563eb;
-            color: #ffffff;
-            transform: translateY(-3px);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Mahasiswa - Hilwa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f3f5fa;
+    color: #334155;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    animation: muncul 1s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    background: #3157a4;
+    height: 120px;
+}
+
+.profile {
+    text-align: center;
+    padding: 0 25px 30px;
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -65px;
+    transition: 0.4s;
+}
+
+.profile img:hover {
+    transform: scale(1.08);
+}
+
+h1 {
+    color: #1e293b;
+    font-size: 27px;
+    margin-top: 12px;
+}
+
+.identity {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.prodi {
+    display: inline-block;
+    background: #e0eaff;
+    color: #3157a4;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.content {
+    padding: 0 35px 35px;
+}
+
+.section {
+    margin-top: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+h2 {
+    font-size: 17px;
+    color: #3157a4;
+    margin-bottom: 12px;
+}
+
+.section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #64748b;
+}
+
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobby {
+    background: #f1f5f9;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.hobby:hover {
+    background: #3157a4;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social a {
+    color: #3157a4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #e17a40;
+    transform: translateY(-3px);
+}
+
+footer {
+    background: #f8fafc;
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 23px;
+    }
+
+    .content {
+        padding: 0 22px 25px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <div class="card-header"></div>
-        <div class="profile-img-container">
-            <!-- Ganti URL gambar di bawah dengan link foto Anda -->
-            <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
-        </div>
-        <div class="profile-body">
-            <h1 class="name">Hilwa Filicia Rosalba</h1>
-            <p class="identity">NIM: 025241461175 &bull; Angkatan 2025</p>
-            
-            <div class="prodi-badge">Manajemen Informasi Komunikasi<br>Halo! Saya Hilwa Filicia Rosalba, Mahasiswa semester 3 STMM MMTC Yogyakarta. Saya memiliki ketertarikan pada media digital dan konten serta senang mengeksplor ide-ide baru, mempelajari hal-hal kreatif seperti di bidang desain digitals</div> 
-            
+<div class="container">
 
-            <div class="section-title">Hobi & Minat</div>
-            <div class="hobbies">
-                <span class="hobby-tag">Bermain musik</span>
-                <span class="hobby-tag">Desain</span>
-                <span class="hobby-tag">Mendengarkan musik</span>
-                <span class="hobby-tag">Edit video</span>
-            </div>
+    <!-- Bagian Identitas -->
+    <div class="header"></div>
 
-            <div class="section-title">Media Sosial</div>
-            <div class="social-links">
-                <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:email@mahasiswa.ac.id" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+    <div class="profile">
+
+        <img src="foto.jpg" alt="Foto Profil">
+
+        <h1>Hilwa Filicia Rosalba</h1>
+
+        <p class="identity">
+            NIM: 025241461175 | Angkatan 2025
+        </p>
+
+        <div class="prodi">
+            Manajemen Informasi Komunikasi
         </div>
+
     </div>
+
+    <!-- Bagian Konten -->
+    <div class="content">
+
+        <div class="section">
+            <h2>👋 Tentang Saya</h2>
+            <p>
+                Halo! Saya Hilwa Filicia Rosalba, mahasiswa semester 3
+                STMM MMTC Yogyakarta. Saya memiliki ketertarikan pada
+                media digital dan konten. Saya senang mengeksplorasi
+                ide-ide baru serta mempelajari hal-hal kreatif,
+                khususnya di bidang desain digital.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Program Studi</h2>
+            <p>
+                Manajemen Informasi Komunikasi
+                <br>
+                STMM MMTC Yogyakarta
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🎨 Hobi & Minat</h2>
+
+            <div class="hobbies">
+                <span class="hobby">🎵 Bermain Musik</span>
+                <span class="hobby">🎨 Desain</span>
+                <span class="hobby">🎧 Mendengarkan Musik</span>
+                <span class="hobby">🎬 Edit Video</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📱 Media Sosial</h2>
+
+            <div class="social">
+                <a href="https://instagram.com" target="_blank">
+                    Instagram
+                </a>
+
+                <a href="https://github.com" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:email@mahasiswa.ac.id">
+                    Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Hilwa Filicia Rosalba | My Student Profile
+    </footer>
+
+</div>
 
 </body>
 </html>
