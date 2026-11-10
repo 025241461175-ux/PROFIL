@@ -1,24 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Mahasiswa</title>
-  <style>
-    body { font-family: Arial; background: #eaf2f8;
-           text-align: center; padding: 40px; }
-    .card { background: white; max-width: 500px;
-            margin: auto; padding: 30px; border-radius: 15px; }
-    h1 { color: #1769aa; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <!-- FontAwesome untuk ikon media sosial -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .card-header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            height: 120px;
+        }
+        .profile-img-container {
+            margin-top: -60px;
+            margin-bottom: 15px;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .profile-body {
+            padding: 0 25px 25px 25px;
+        }
+        .name {
+            font-size: 1.5rem;
+            color: #1e293b;
+            font-weight: 700;
+        }
+        .identity {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        .prodi-badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #3730a3;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin: 12px 0 16px 0;
+        }
+        .bio {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .hobbies {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        .hobby-tag {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f1f5f9;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .social-btn:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Profil Mahasiswa</h1>
-    <h2>Nama: Nama Anda</h2>
-    <p>Program Studi: Manajemen Informasi Komunikasi</p>
-    <p>Saya sedang belajar Cloud Computing.</p>
-    <p>Email: mahasiswa@email.com</p>
-  </div>
+
+    <div class="card">
+        <div class="card-header"></div>
+        <div class="profile-img-container">
+            <!-- Ganti URL gambar di bawah dengan link foto Anda -->
+            <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+        </div>
+        <div class="profile-body">
+            <h1 class="name">Nama Mahasiswa</h1>
+            <p class="identity">NIM: 220101001 &bull; Angkatan 2022</p>
+            
+            <div class="prodi-badge">Technik Informatika</div>
+            
+            <p class="bio">
+                Antusias terhadap pengembangan web dan kecerdasan buatan. Suka mempelajari teknologi baru serta berkolaborasi dalam proyek perangkat lunak.
+            </p>
+
+            <div class="section-title">Hobi & Minat</div>
+            <div class="hobbies">
+                <span class="hobby-tag">Coding</span>
+                <span class="hobby-tag">Desain UI/UX</span>
+                <span class="hobby-tag">Membaca</span>
+                <span class="hobby-tag">Fotografi</span>
+            </div>
+
+            <div class="section-title">Media Sosial</div>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:email@mahasiswa.ac.id" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
