@@ -107,17 +107,19 @@ body {
     text-align: center;
     padding: 0 25px 30px;
 }
-
+    
 .profile img {
     width: 145px;
     height: 145px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 20px;
     border: 6px solid white;
     margin-top: -70px;
+    background: #ffe4ef;
     box-shadow: 0 5px 20px rgba(219,112,147,0.3);
     transition: 0.5s;
-    animation: fotoMasuk 1.5s ease;
+}
 }
 
 @keyframes fotoMasuk {
